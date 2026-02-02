@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg"
+    android:padding="@dimen/spacing_medium">
+
+    <!-- Header with Gradient Background -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_large"
+        app:cardBackgroundColor="@color/primary_color"
+        app:cardCornerRadius="@dimen/corner_radius_large"
+        app:cardElevation="@dimen/elevation_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌆 City Explorer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_display"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                android:drawablePadding="@dimen/spacing_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="Manage your favorite cities around the world"
+                android:textColor="@color/primary_light"
+                android:textSize="@dimen/text_medium"
+                android:alpha="0.9" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Input Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/input_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="@dimen/corner_radius_large"
+        app:cardElevation="@dimen/elevation_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="✨ Add New City"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/text_xlarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/city_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:background="@drawable/edit_text_background"
+                android:hint="Enter city name..."
+                android:padding="@dimen/input_padding"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_medium"
+                android:visibility="visible"
+                android:inputType="textCapWords"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTint="@color/primary_color"
+                android:importantForAutofill="no" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xlarge"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_card">
+
+        <Button
+            android:id="@+id/add_city_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/button_primary_ripple"
+            android:elevation="@dimen/elevation_medium"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="Add City"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/delete_city_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/button_danger_ripple"
+            android:elevation="@dimen/elevation_medium"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- City List Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="@dimen/corner_radius_large"
+        app:cardElevation="@dimen/elevation_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="📍 Your Cities"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/text_xlarge"
+                android:textStyle="bold"
+                android:drawablePadding="@dimen/spacing_small" />
+
+            <ListView
+                android:id="@+id/city_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@color/divider_color"
+                android:dividerHeight="1dp"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:scrollbars="none"
+                android:padding="2dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- FAB with Shadow -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:backgroundTint="@color/accent_color"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/elevation_xhigh"
+        app:maxImageSize="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/warning_color"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
