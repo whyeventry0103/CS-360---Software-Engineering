@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Color Palette -->
+    <color name="primary_color">#6A5ACD</color> <!-- Slate Blue -->
+    <color name="primary_light">#A091F5</color>
+    <color name="primary_dark">#483D8B</color>
+
+    <!-- Secondary/Action Colors -->
+    <color name="accent_color">#FF6B8B</color> <!-- Coral Pink -->
+    <color name="success_color">#4CAF50</color> <!-- Green -->
+    <color name="danger_color">#FF5252</color> <!-- Red -->
+    <color name="warning_color">#FFC107</color> <!-- Amber -->
+
+    <!-- Background Colors -->
+    <color name="light_bg">#F8F9FF</color> <!-- Very light blue -->
+    <color name="dark_bg">#1A1B2E</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="list_item_bg">#F0F2FF</color>
+    <color name="list_item_selected">#E3E8FF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#2D3047</color> <!-- Dark Blue-Gray -->
+    <color name="text_secondary">#6B7280</color> <!-- Medium Gray -->
+    <color name="text_light">#9CA3AF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Border & Divider -->
+    <color name="border_color">#E5E7FF</color> <!-- Light Purple tint -->
+    <color name="divider_color">#D1D5FF</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#6A5ACD</color>
+    <color name="gradient_middle">#8A7CFF</color>
+    <color name="gradient_end">#A091F5</color>
+
+    <!-- Shadow Colors -->
+    <color name="shadow_light">#1A6A5ACD</color>
+    <color name="shadow_dark">#2A483D8B</color>
+</resources>
